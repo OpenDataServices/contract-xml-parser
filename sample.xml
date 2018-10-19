@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contract>
+
+    <title>
+        Sample of a contract
+    </title>
+
+    <subtitle>
+        This is a subtitle
+    </subtitle>
+
+    <body>
+
+        <title>Interpretations</title>
+
+        <item-with-children marker-type="disc">
+            <item>In these Articles:</item>
+
+            <child-item>
+                <item>**“Address”** means a postal address or, for the purposes of electronic communication, a
+                    fax number, email address or telephone number for receiving text messages;</item>
+            </child-item>
+
+            <child-item>
+                <item>
+                    **“Articles”** means the Company’s articles of association;
+                </item>
+            </child-item>
+        </item-with-children>
+
+        <item>
+            Unless the context requires otherwise, other words or expressions contained in these Articles bear
+            the same meaning as in the Companies Act 2006 as in force on the date when these Articles become
+            binding on the Co-operative.
+            Schedule 1 to the Companies (Model Articles) Regulations 2008 shall apply to the Co-operative, save
+            where amended or replaced by these Articles.
+            In the case of any variation or inconsistency between these Articles and the model articles, these
+            Articles shall prevail.
+        </item>
+
+        <title>Offer of shares and debentures</title>
+
+        <item>
+            The Co-operative is a private company and accordingly shall not offer to the public any type of shares
+            in or debentures of the Co-operative nor shall it allot or agree to allot such shares or debentures
+            with a view to their being offered for sale to the public.
+        </item>
+
+        <title>Resolutions</title>
+
+
+        <item-with-children marker-type="loweralpha">
+            <item>Decisions at general meetings shall be made by passing resolutions:</item>
+
+            <child-item>
+                <item>Decisions involving an alteration to articles that have been Entrenched in accordance with
+                    section 22 of the Act require the approval of 100% of the Members.</item>
+            </child-item>
+
+            <child-item>
+                <item-with-children marker-type="number">
+                    <item>
+                        The following decisions must be made by special resolution:
+                    </item>
+                    <child-item>
+                        <item>
+                            Decisions involving an alteration to the Articles of the Co-operative, except where an
+                            article is Entrenched as detailed above;
+                        </item>
+                    </child-item>
+                    <child-item>
+                        <item>
+                           Decisions to expel Members;
+                        </item>
+                    </child-item>
+                    <child-item>
+                        <item>
+                            Decisions to dispose of assets of the Co-operative equivalent in value to one-third of the
+                            Co-operative’s last published balance sheet, as detailed in these Articles;
+                        </item>
+                    </child-item>
+                    <child-item>
+                        <item>
+                            The decision to wind up the Co-operative;
+                        </item>
+                    </child-item>
+                    <child-item>
+                        <item>
+                            Other decisions which are required so by statute.
+                        </item>
+                    </child-item>
+                </item-with-children>
+            </child-item>
+
+
+            <child-item>
+                <item>All other decisions shall be made by ordinary resolution.</item>
+            </child-item>
+        </item-with-children>
+
+    </body>
+
+
+</contract>
