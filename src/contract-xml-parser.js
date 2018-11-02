@@ -89,9 +89,18 @@ class ContractXMLParser {
 
     }
 
+
+    _process_body_node_item_with_no_marker(node) {
+
+
+        this.out_body += '<div class="nested'+this.marker_stack.length+'">' + node.textContent.trim() + '</div>';
+
+    }
+
     _process_body_node_item_with_children(node) {
 
         var addedToMarkerStack = false;
+        var firstItemFound = false;
 
         for (var i = 0; i < node.childNodes.length; i++) {
           var childNode = node.childNodes[i];
@@ -99,7 +108,12 @@ class ContractXMLParser {
 
             if(childNode.localName == 'item') {
 
-                this._process_body_node_item(childNode);
+                if (firstItemFound) {
+                    this._process_body_node_item_with_no_marker(childNode);
+                } else {
+                    this._process_body_node_item(childNode);
+                    firstItemFound = true;
+                }
 
             } else if(childNode.localName == 'child-item') {
 
