@@ -77,10 +77,13 @@ class ContractXMLParser {
         var marker = '';
         if (this.marker_stack[0]['type'] == 'number') {
             marker = this.marker_stack[0]['next'] + '.';
-        this.marker_stack[0]['next']++;
+            this.marker_stack[0]['next']++;
         } if (this.marker_stack[0]['type'] == 'loweralpha') {
             marker = '(' + this._marker_number_to_alpha(this.marker_stack[0]['next']) + ')';
-        this.marker_stack[0]['next']++;
+            this.marker_stack[0]['next']++;
+        } if (this.marker_stack[0]['type'] == 'lowerroman') {
+            marker = '(' + this._convert_to_roman(this.marker_stack[0]['next']).toLowerCase() + ')';
+            this.marker_stack[0]['next']++;
         } else if (this.marker_stack[0]['type'] == 'disc') {
             marker = 'o.';
         }
@@ -128,6 +131,11 @@ class ContractXMLParser {
                             'type': 'loweralpha',
                             'next': 1,
                         })
+                    } else if (node.getAttribute('marker-type') == 'lowerroman') {
+                        this.marker_stack.unshift({
+                            'type': 'lowerroman',
+                            'next': 1,
+                        })
                     } else {
                         this.marker_stack.unshift({
                             'type': 'number',
@@ -172,6 +180,36 @@ class ContractXMLParser {
     _marker_number_to_alpha(number) {
         return String.fromCharCode(number + 96);
     }
+
+
+    /** From StackOverFlow: https://stackoverflow.com/questions/9083037/convert-a-number-into-a-roman-numeral-in-javascript **/
+    _convert_to_roman(num) {
+      var roman = {
+        M: 1000,
+        CM: 900,
+        D: 500,
+        CD: 400,
+        C: 100,
+        XC: 90,
+        L: 50,
+        XL: 40,
+        X: 10,
+        IX: 9,
+        V: 5,
+        IV: 4,
+        I: 1
+      };
+      var str = '';
+
+      for (var i of Object.keys(roman)) {
+        var q = Math.floor(num / roman[i]);
+        num -= q * roman[i];
+        str += i.repeat(q);
+      }
+
+      return str;
+    }
+
 }
 
 

@@ -62,7 +62,7 @@
             </child-item>
 
             <child-item>
-                <item-with-children marker-type="number">
+                <item-with-children marker-type="lowerroman">
                     <item>
                         The following decisions must be made by special resolution:
                     </item>
