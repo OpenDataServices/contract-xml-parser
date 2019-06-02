@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contract>
+
+    <title>
+        Sample of a contract
+    </title>
+
+    <subtitle>
+        This is a subtitle
+    </subtitle>
+
+    <body>
+
+        <title>Interpretations</title>
+
+        <item>
+            Unless the context requires otherwise, other words or expressions contained in these Articles bear
+            the same meaning as in the Companies Act 2006 as in force on the date when these Articles become
+            binding on the Co-operative.
+            Schedule 1 to the Companies (Model Articles) Regulations 2008 shall apply to the Co-operative, save
+            where amended or replaced by these Articles.
+            In the case of any variation or inconsistency between these Articles and the model articles, these
+            Articles shall prevail.
+        </item>
+
+    </body>
+
+
+</contract>

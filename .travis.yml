@@ -1,0 +1,15 @@
+dist: xenial
+addons:
+  chrome: stable
+
+language: python
+
+python:
+  - "3.5"
+
+install:
+  - "wget https://chromedriver.storage.googleapis.com/2.36/chromedriver_linux64.zip; unzip chromedriver_linux64.zip -d chromedriver; export PATH=$PATH:`pwd`/chromedriver"
+  - "pip3 install selenium"
+
+script:
+  - "pytest pytest/test.py"

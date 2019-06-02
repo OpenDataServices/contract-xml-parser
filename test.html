@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Contract XML Parser</title>
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="form">
+        <form onsubmit="submitForm(); return false;">
+
+            <textarea name="data" id="datain"></textarea>
+
+            <input type="submit" id="submit">
+
+        </form>
+    </div>
+    <div id="results">
+
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="src/contract-xml-parser.js"></script>
+    <script>
+        function submitForm() {
+            var cxmlp = new ContractXMLParser($('form textarea').val())
+            $('#form').hide();
+            $('#results').show().html(cxmlp.get())
+        }
+    </script>
+
+</body>
+</html>
